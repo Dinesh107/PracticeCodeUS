@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Float</title>
+<style> 
+h1{
+    margin-left: 150px;
+}
+p{
+    margin-left: 90px;
+}
+    #main{
+        border: 2px solid red;
+        margin: 100px 250px 250px 300px;
+        padding: 100px 0px 100px 300px;
+        background-color: rgb(238, 231, 222);
+        border-radius: 30px;
+        }
+    p{
+        border: 3px solid rgba(11, 12, 11, 0.377);
+        height: 50px;
+        width: 200px;
+        background-color: rgb(239, 206, 238);
+    }
+    button{
+        margin-left: 130px;
+    }
+</style>
+<script>/*
+   let form = document.querySelector("form")
+   let inp = document.querySelector("#input1")
+   let inp2 = document.querySelector("#input2")
+
+   form.addEventListener("ADD",(e)=>{
+    e.preventdefault()
+    validate()
+   })
+
+   function validate(){
+    let input1 = inp.value
+    let input2 = inp2.value
+    if(input1 == "")
+       {
+        seterror(input,"float value is required")
+    }else if (!(input1.includes(".")))
+        {
+            seterror(input,"float value is required")
+        }
+      
+    else{
+        setsuccess(input)
+    }
+    
+    if(input2 == ""){
+        seterror(input,"float value is required")
+    }else{
+        setsuccess(input)
+    }
+
+    let input3 = input1 + input2
+    document.getElementById("output").innerHTML = input3
+    
+}
+function seterror(tag,msg){
+    let parenttag = tag.parentelement
+    parenttag.querySelector("#error").innerhtml=msg
+    parenttag.classlist.add("error")
+    parenttag.classlist.remove("success")      
+}
+function setsuccess(tag){
+    let parenttag = tag.parentelement
+    parenttag.querySelector("#error").innerhtml= ""
+    parenttag.classlist.add("success")
+    parenttag.classlist.remove("error")
+}*/
+
+
+    function calculate(){
+
+        let a = document.getElementById("input1").value;
+        let b = document.getElementById("input2").value;
+        var c = a + b ;
+        document.getElementById("output").innerHTML = c;
+    } 
+
+</script>
+</head>
+<body>
+    <div id="main">
+       <label for="">Enter Float Value</label>
+       <input id="input1" type="text" placeholder="enter Value" required> 
+       <div id="error"></div> <h1>+</h1>
+       <label for="">Enter Float Value 2</label>
+       <input id="input2" type="text" placeholder="enter Value" required >
+       <div id="error"></div> <br><br>
+       <Button onclick="calculate()">Out Put</Button>
+      <!-- <button type="ADD">ADD</button> -->
+       <p id="output"></p>
+
+
+    </div>
+</body>
+</html>
